@@ -114,7 +114,7 @@
 
 			$.ajax({
 
-						url:'http://api.openweathermap.org/data/2.5/weather?' + WeatherApicall +'&units=metric' +'&APPID=5a3bc4e75b0b457ea29d7c6f91e97a08',
+						url:'https://api.openweathermap.org/data/2.5/weather?' + WeatherApicall +'&units=metric' +'&APPID=5a3bc4e75b0b457ea29d7c6f91e97a08',
 						type: "GET",
 						dataType: "jsonp",
 						success: function(data){
@@ -184,7 +184,7 @@
 
     				$.ajax({
 
-						url:'http://api.openweathermap.org/data/2.5/forecast/daily?' + WeatherApicall +'&units=metric' +'&APPID=5a3bc4e75b0b457ea29d7c6f91e97a08',
+						url:'https://api.openweathermap.org/data/2.5/forecast/daily?' + WeatherApicall +'&units=metric' +'&APPID=5a3bc4e75b0b457ea29d7c6f91e97a08',
 						type: "GET",
 						dataType: "jsonp",
 						success: function(data){
