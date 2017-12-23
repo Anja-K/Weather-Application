@@ -1,0 +1,349 @@
+/*Main style*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.background{
+		background-image: url("../backgrounds/bg.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		font-family: Arial, sans-serif;
+		background-color: #0e122d;
+
+		-ms-filter: blur(8px);
+		-moz-filter: blur(8px);
+		-webkit-filter: blur(8px);
+		filter: blur(8px);
+
+		height: 120%;
+		width: 120%;
+
+		position: absolute;
+		top: -10%;
+		left: -10%;
+
+		
+	}
+
+#loader img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+	width: 30%;
+}	
+
+.container{
+	position: absolute;
+	width: 60%;
+	height: auto;
+	margin: 0;
+    top: 50%;
+    left: 50%;
+   
+
+
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+
+.container div form{
+	background-color: rgba(0,0,0,0.2);
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+	display: none;
+
+}
+
+.container div form input{
+	font-size: 1rem;
+	padding: 0.2em 0;
+	margin: 1em;
+	background-color: transparent;
+	outline: none;
+	border:none;
+	border-bottom: 0.1em solid #063956;
+	position: relative;
+	color: #fff;
+}
+
+.container div form input::placeholder{
+	color: #fff;
+}
+
+.container div form button{
+	background-color: #123b60;
+	font-size: 0.8rem;
+	padding: 0.5em 1em;
+	color: #fff;
+	border: none;
+	position: relative;
+}
+
+.container .info{
+	margin-top: 2% ;
+	 display: none;
+	
+	
+}
+
+.container .info .general-info,
+.container .info .detailed-info{
+	position: relative;
+	width: 49%;
+	float:left;
+	height: 450px;
+	font-family:Arial,sans-serif;
+	}
+
+.container .info .general-info{
+	margin-right: 2%;
+	background-image: url("");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center; 
+	text-align: center;
+	font-family: Arial, sans-serif;
+	color: #fff;
+
+
+
+}
+
+.container .info .general-info .cover{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.2);
+	z-index: 0;
+}
+
+.container .info .general-info p,
+.container .info .general-info h4{
+	position: relative;
+}
+
+.container .info .general-info p{
+	font-size: 1.1rem;
+	padding: 1.5em 0 0.5em 0;
+}
+
+.container .info .general-info h4{
+	font-size: 1.5rem;
+	font-weight: 300;
+	padding-bottom: 1em;
+}
+
+.glass{
+	background: inherit;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+	margin: auto;
+
+	
+}
+
+.glass:before{
+	content: "";
+	background: inherit;
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: -25px;
+	left: -25px;
+
+	-ms-box-shadow: inset 0 0 0 200px rgba(255,255,255, 0.2);
+	-moz-box-shadow: inset 0 0 0 200px rgba(255,255,255, 0.2);
+	-webkit-box-shadow: inset 0 0 0 200px rgba(255,255,255, 0.2);
+	box-shadow: inset 0 0 0 200px rgba(255,255,255, 0.2);
+
+	-ms-filter: blur(10px);
+	-moz-filter: blur(10px);
+	-webkit-filter: blur(10px);
+	filter: blur(10px);
+	display: block;
+
+}
+
+.container .info .general-info .glass .main-info{
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	-ms-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	font-size: 2.5rem;
+	color: #fff;
+}
+
+.glass .main-info svg{
+	fill: #fff;
+	width: 2.5em;
+  	height: 2.5em;
+  		}
+
+ .container .info .general-info .glass .main-info h4{
+ 	font-size: 2rem;
+ 	padding: 0.2em;
+ }
+
+.container .info .general-info .basic-info{
+	width: 80%;
+	height: 80px;
+	margin: 5% auto;
+	position: relative;
+
+}
+
+.container .info .general-info .basic-info .current-info{
+	box-sizing: border-box;
+	width: 33%;
+	border-right: 1px solid #fff;
+	float: left;
+	height: 100%;
+}
+
+.container .info .general-info .basic-info .current-info:last-child{
+	border-right: none;
+}
+.container .info .general-info .basic-info .current-info img{
+	width: 40%;
+}
+
+.container .info .general-info .basic-info .current-info p{
+	padding: 0;
+}
+
+.container .info .general-info .basic-info .current-info p #temp_min{
+	opacity: 0.6;
+}
+
+/*Detaled info,hourly forecast and map*/
+
+.detailed-info .daily-forecast{
+	height: 49%;
+	margin-bottom: 2%;
+	position: relative;
+	background-color: rgba(0,0,0,0.3);
+	color: #fff;
+	padding: 1.5em;
+	box-sizing: border-box;
+}
+
+
+.detailed-info .daily-forecast div:first-child h4{
+	float: left;
+	width: 50%;
+	font-weight: 300;
+	font-size: 1.2rem;
+
+}
+
+.detailed-info .daily-forecast div:first-child, .hourly-forecast {
+	height: 50%;
+}
+
+.detailed-info .daily-forecast div:first-child .hour{
+	font-size: 2.5rem;
+	text-align: center;
+}
+
+.detailed-info .daily-forecast p{
+	clear: both;
+	padding: 1em 0;
+}
+
+.detailed-info .daily-forecast .hourly-forecast .hours{
+	text-align: center;
+	float: left;
+	padding-right: 0.8em;
+	
+}
+
+.detailed-info .daily-forecast .hourly-forecast .hours p{
+	padding: 0;
+
+}
+
+.detailed-info .daily-forecast .hourly-forecast .hours img{
+	width: 35px;
+}
+
+.detailed-info #map{
+	height: 49%;
+	background-color: #fff;
+}
+
+
+/*============Media queries=================*/
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 80%;
+
+    }
+
+    .detailed-info .daily-forecast{
+    	padding: 1em;
+    }
+
+   
+}
+
+@media screen and (max-width: 695px) {
+	.container {
+        width: 90%;
+
+    }
+    
+}
+
+
+@media screen and (max-width: 616px) {
+
+	html,body{
+		overflow-y:scroll;
+	}
+	.background{
+		height: 160%;
+	}
+
+	.container{
+		position: static;
+		margin: 5% auto;
+
+		-ms-transform: translate3d(0,0,0);
+		-moz-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0);
+		transform: translate3d(0,0,0);
+	}
+	.container .info .general-info,
+	 .container .info .detailed-info{
+	 	float:none;
+	 	width: 100%;
+	}
+    
+}
